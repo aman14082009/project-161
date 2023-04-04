@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js">  </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"> </script>
+    <script src="./throw.js"></script>
+</head>
+<body>
+    <a-scene id="scene">
+        <a-entity
+        id="camera"
+        camera
+        position="0 1.6 0"
+        wasd-controls
+        look-controls="pointerLockEnabled: false"        
+      >
+      <a-cursor></a-cursor> 
+        </a-entity>
+         <a-entity balls></a-entity>
+        
+        <!--Ground-->
+       
+       
+        <a-plane
+          id="ground"
+          repeat="5 5"
+          position="0 1 0"
+          rotation="-90 0 0"
+          height="200"
+          width="200"
+          color="yellow"
+          static-body
+          visible="true"
+        >
+       </a-plane>
+
+      <!--pins-->
+      <a-cylinder  id="pin1" position="-2 1.5 -10" color="tomato" depth="1" radius="0.3" height="1"></a-cylinder>
+
+      <a-cylinder  id="pin2" position="-1 1.5 -10" color="tomato" depth="1" radius="0.3" height="1"></a-cylinder>
+
+      <a-cylinder  id="pin3" position="0 1.5 -10" color="tomato" depth="1" radius="0.3" height="1"></a-cylinder>
+
+      <a-cylinder  id="pin4" position="-1.6 2 -11" color="tomato" depth="1" radius="0.3" height="1"></a-cylinder>
+
+      <a-cylinder  id="pin5" position="-0.5 2 -11" color="tomato" depth="1" radius="0.3" height="1"></a-cylinder>
+
+      <a-cylinder  id="pin6" position="-1.2 2.5 -12" color="tomato" depth="1" radius="0.3" height="1"></a-cylinder>
+    </a-scene>
+
+    </a-scene>
+</body>
+</html>
